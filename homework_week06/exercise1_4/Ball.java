@@ -1,3 +1,5 @@
+package exercise1_4;
+
 public class Ball {
     private float x;
     private float y;
@@ -9,8 +11,8 @@ public class Ball {
         this.x = x;
         this.y = y;
         this.radius = radius;
-        this.xDelta = speed * (float) Math.cos(Math.toRadians(direction));
-        this.yDelta = -speed * (float) Math.sin(Math.toRadians(direction));
+        xDelta = (float) (speed * Math.cos(direction));
+        yDelta = (float) (speed * Math.sin(direction));
     }
 
     public float getX() {
@@ -37,19 +39,19 @@ public class Ball {
         this.radius = radius;
     }
 
-    public float getXDelta() {
+    public float getxDelta() {
         return xDelta;
     }
 
-    public void setXDelta(float xDelta) {
+    public void setxDelta(float xDelta) {
         this.xDelta = xDelta;
     }
 
-    public float getYDelta() {
+    public float getyDelta() {
         return yDelta;
     }
 
-    public void setYDelta(float yDelta) {
+    public void setyDelta(float yDelta) {
         this.yDelta = yDelta;
     }
 
@@ -68,6 +70,6 @@ public class Ball {
 
     @Override
     public String toString() {
-        return "Ball[(" + x + ", " + y + "), speed = (" + xDelta + ", " + yDelta + ")]";
+        return "Ball[(" + x + "," + y + "), speed=(" + xDelta + "," + yDelta + ")]";
     }
 }

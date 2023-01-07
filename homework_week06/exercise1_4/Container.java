@@ -1,3 +1,5 @@
+package exercise1_4;
+
 public class Container {
     private int x1;
     private int y1;
@@ -7,8 +9,8 @@ public class Container {
     public Container(int x, int y, int width, int height) {
         x1 = x;
         y1 = y;
-        x2 = x + width - 1;
-        y2 = y + height - 1;
+        x2 = x1 + width - 1;
+        y2 = y1 + height - 1;
     }
 
     public int getX() {
@@ -28,11 +30,11 @@ public class Container {
     }
 
     public boolean collides(Ball ball) {
-        if ((ball.getX() - ball.getRadius() <= this.x1) || (ball.getX() + ball.getRadius() >= this.x2)) {
+        if (ball.getX() - ball.getRadius() <= x1 || ball.getX() + ball.getRadius() >= x2) {
             ball.reflectHorizontal();
             return true;
         }
-        if (ball.getY() - ball.getRadius() <= this.y1 || ball.getY() + ball.getRadius() >= this.y2) {
+        if (ball.getY() - ball.getRadius() <= y1 || ball.getY() + ball.getRadius() >= y2) {
             ball.reflectVertical();
             return true;
         }
@@ -41,6 +43,6 @@ public class Container {
 
     @Override
     public String toString() {
-        return "Container[(" + x1 + "," + y1 + "), (" + x2 + "," + y2 + ")]";
+        return "Container[(" + x1 + "," + y1 + "),(" + x2 + "," + y2 + ")]";
     }
 }

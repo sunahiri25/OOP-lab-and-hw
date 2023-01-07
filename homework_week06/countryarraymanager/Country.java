@@ -36,5 +36,4 @@ public class Country {
     public double getGdp() {
         return 0.0;
     }
-
 }
