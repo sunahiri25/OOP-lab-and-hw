@@ -1,0 +1,13 @@
+public class TestBook2 {
+    public static void main(String[] args) {
+        // Declare and allocate an array of Authors
+        Author[] authors = new Author[2];
+        authors[0] = new Author("Tan Ah Teck", "AhTeck@somewhere.com", 'm');
+        authors[1] = new Author("Paul Tan", "Paul@nowhere.com", 'm');
+
+        // Declare and allocate a Book instance
+        Book2 javaDummy = new Book2("Java for Dummy", authors, 19.99, 99);
+        System.out.println(javaDummy);
+        // Book[name = Java for Dummy, authors = {Author[name = Tan Ah Teck, email = AhTeck@somewhere.com, gender = m], Author[name = Paul Tan, email = Paul@nowhere.com, gender = m]}, price = 19.99, qty = 99]
+    }
+}
